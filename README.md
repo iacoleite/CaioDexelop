@@ -8,11 +8,11 @@ CaioDexelop è un'applicazione ASP.NET Core MVC che utilizza Entity Framework Co
 *   SQL Server (Express Edition o versione completa): [Download SQL Server Express](https://www.microsoft.com/it-it/sql-server/sql-server-downloads)
 
 **Nota:** Per SQL Server, è possibile utilizzare anche un'istanza locale di SQL Server (LocalDB) se configurata correttamente.
+
 ## Configurazione
 
 1. Clona il repository: 
-	git clone https://github.com/tuo-username/CaioDexelop.git
-	cd CaioDexelop
+	git clone https://github.com/iacoleite/CaioDexelop
 
 2. Configura la stringa di connessione nel file `appsettings.json`. Questo file contiene le impostazioni di connessione al database.
 Devi sostituire la stringa predefinita con quella corretta per il tuo ambiente.
@@ -40,9 +40,22 @@ Il file `launchSettings.json` contiene la configurazione dei profili di avvio.
 Alla prima esecuzione, o nel caso in cui il database non esista o sia vuoto, il framework si occuperà automaticamente di:
 *   Creare il database.
 *   Applicare le migrazioni per la creazione delle tabelle.
-*   Popolare il database con i dati iniziali (definiti nel codice tramite *seeding* (UtenteSeeder.cs).
+*   Popolare il database con i dati iniziali (definiti nel codice tramite *seeding* (UtenteSeeder.cs)).
 
 Questo processo automatico semplifica la configurazione iniziale dell'applicazione.
+
+## Configurazione del Database (Opzionale)
+
+Questo passaggio è *totalmente opzionale*.
+
+I comandi SQL per creare il database e inserire dati casuali sono disponibili nel file `DBinstructions.txt`. 
+
+**Passaggi riassunti:**
+
+1.  Connettiti al tuo server SQL usando uno strumento come SQL Server Management Studio (SSMS) o `sqlcmd`.
+2.  Esegui i comandi SQL contenuti nel file `DBinstructions.txt` nell'ordine in cui appaiono.
+
+**Nota:** Assicurati di configurare la stringa di connessione nel file `appsettings.json` per puntare al database che hai creato.
 
 2. Apri il browser e naviga a `https://localhost:7119` o 'http://localhost:5169'.
 
