@@ -55,7 +55,7 @@ I comandi SQL per creare il database e inserire dati casuali sono disponibili ne
 **Passaggi riassunti:**
 
 1.  Connettiti al tuo server SQL usando uno strumento come SQL Server Management Studio (SSMS) o `sqlcmd`.
-2.  Esegui i comandi SQL contenuti nel file `DBinstructions.txt` nell'ordine in cui appaiono.
+2.  Esegui i comandi SQL contenuti nel file `DBinstructions.sql` nell'ordine in cui appaiono.
 
 **Nota:** Assicurati di configurare la stringa di connessione nel file `appsettings.json` per puntare al database che hai creato.
 
