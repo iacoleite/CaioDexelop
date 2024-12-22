@@ -1,4 +1,4 @@
-CREATE DATABASE CaioDexelopContext-f36e5653-91f0-4033-b3fb-31655002cd88;
+CREATE DATABASE [CaioDexelopContext-f36e5653-91f0-4033-b3fb-31655002cd88];
 
 CREATE TABLE Utente (
     ID INT PRIMARY KEY IDENTITY(1,1), 
@@ -19,6 +19,3 @@ BEGIN
     );
     SET @Counter = @Counter + 1;
 END
-
-
-
