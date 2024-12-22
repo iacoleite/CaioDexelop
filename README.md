@@ -46,6 +46,30 @@ Questo processo automatico semplifica la configurazione iniziale dell'applicazio
 
 2. Apri il browser e naviga a `https://localhost:7119` o `http://localhost:5169`.
 
+## Esecuzione del progetto in Visual Studio
+
+Oltre all'esecuzione tramite `dotnet run`, è possibile eseguire il progetto direttamente da Visual Studio. Questo metodo offre funzionalità di debug avanzate.
+
+1.  **Aprire la soluzione:** Avvia Visual Studio e seleziona "Apri un progetto o una soluzione". Naviga fino alla cartella del progetto e seleziona il file `CaioDexelop.sln`.
+
+2.  **Configurare la connessione al database (se non già configurata):**
+
+    *   Aprire "Esplora oggetti di SQL Server" (Visualizza -> Esplora oggetti di SQL Server).
+    *   Aggiungere una nuova connessione al server SQL:
+        *   Clic destro su "SQL Server" -> "Aggiungi SQL Server...".
+        *   Inserire le informazioni di connessione (Nome server, Autenticazione, Credenziali).
+        *   Cliccare su "Connetti".
+
+3.  **Verificare la configurazione di avvio:** In Visual Studio, nella barra degli strumenti, accanto al pulsante di avvio (con la freccia verde), dovresti vedere un menu a tendina. Assicurati che sia selezionato il profilo di avvio corretto. Di default dovresti trovare "CaioDexelop" (per HTTP) e "https" (per HTTPS). Puoi anche aprire il file `launchSettings.json` per visualizzare e modificare le impostazioni dei profili di avvio.
+
+4.  **Eseguire il progetto:**
+    *   **Con debug (F5):** Premi il tasto `F5` o seleziona "Debug" -> "Avvia debug" dal menu. Questo avvierà l'applicazione in modalità debug, permettendoti di impostare breakpoint, ispezionare variabili e utilizzare altre funzionalità di debug.
+    *   **Senza debug (Ctrl+F5):** Premi `Ctrl+F5` o seleziona "Debug" -> "Avvia senza debug". Questo avvierà l'applicazione senza il debugger, con prestazioni generalmente migliori.
+
+5.  **Prima esecuzione e migrazioni:** Come descritto nella sezione "Esecuzione dell'applicazione", alla prima esecuzione o se il database non esiste/è vuoto, l'applicazione creerà il database, applicherà le migrazioni e eseguirà il seeding dei dati automaticamente.
+
+6.  **Apertura nel browser:** Una volta avviato il progetto, Visual Studio aprirà automaticamente il browser web all'indirizzo configurato in `launchSettings.json` (di solito `https://localhost:7119` o `http://localhost:5169`).
+
 ## Configurazione del Database (Opzionale)
 
 Questo passaggio è *totalmente opzionale*.
