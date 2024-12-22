@@ -44,7 +44,7 @@ Alla prima esecuzione, o nel caso in cui il database non esista o sia vuoto, il 
 
 Questo processo automatico semplifica la configurazione iniziale dell'applicazione.
 
-2. Apri il browser e naviga a `https://localhost:7119` o 'http://localhost:5169'.
+2. Apri il browser e naviga a `https://localhost:7119` o `http://localhost:5169`.
 
 ## Configurazione del Database (Opzionale)
 
