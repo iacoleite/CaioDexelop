@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Dex User DB</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CaioDexelop.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index"> Dex User DB</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Utente" asp-action="Index">Utenti</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted bg-primary">
+        <div class="container" style="white-space: nowrap; display: flex; align-items: center;">
+            <a class="nav-link text-light" asp-controller="Home" asp-action="About"><strong style="display: inline-flex; align-items: center; margin-right: 10px; font-size: 1rem; font-weight: normal;">&copy; 2024 - Caio Leite |</strong></a>
+            
+            <a class="nav-link text-light" href="https://github.com/iacoleite" style="display: inline-flex; align-items: center; margin-right: 10px; font-size: 1rem;">
+                <img src="~/assets/Logo Github.svg" width="25" style="vertical-align: middle; filter: grayscale(100%) brightness(255); margin-right: 10px;">
+                <strong style="font-size: 1rem; font-weight: normal; vertical-align: middle;">GitHub</strong>
+            </a>
+            <span style="display: inline-flex; align-items: center; margin-right: 10px; font-size: 1rem; color: white">|</span>
+            <a class="nav-link text-light" href="https://www.linkedin.com/in/caio-cobucci-leite/" style="display: inline-flex; align-items: center; font-size: 1rem;">
+                <img src="~/assets/Logo linkedin.svg" width="25" style="vertical-align: middle; filter: grayscale(100%) brightness(255); margin-right: 8px;">
+                <strong style="font-size: 1rem; font-weight: normal; vertical-align: middle;"> Linkedin</strong>
+            </a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

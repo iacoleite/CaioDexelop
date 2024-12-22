@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Dex User DB</h1>
+    @* <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+    <br />
+    <a class="nav-link text-dark" asp-area="" asp-controller="Utente" asp-action="Index"><h4>Visualizza utenti</h4></a>
+    
+    <br />
+    <form asp-controller="Utente" asp-action="Index">
+        <p>
+            <label><strong>Ricerca utenti </strong><input type="text" name="SearchString" /></label>
+            <input type="submit" value="Cerca" />
+        </p>
+    </form>
+    <br />
+    <div style="white-space: nowrap;">
+        <a class="nav-link text-dark" href="https://github.com/iacoleite" style="display:inline-block; padding: 5px 10px; margin-right: 10px; text-decoration: none; color: #212529;">
+            <img src="~/assets/Logo Github.svg" width="30" style="filter: hue-rotate(30deg) brightness(0.95); vertical-align:middle;">
+            <strong style="font-weight: normal; vertical-align:middle;">GitHub</strong>
+        </a>
+        <a class="nav-link text-dark" href="https://www.linkedin.com/in/caio-cobucci-leite/" style="display:inline-block; padding: 5px 10px; text-decoration: none; color: #212529;">
+            <img src="~/assets/Logo linkedin.svg" width="30" style="filter: hue-rotate(30deg) brightness(0.95); vertical-align:middle;">
+            <strong style="font-weight: normal; vertical-align:middle;">Linkedin</strong>
+        </a>
+    </div>
+
+</div>

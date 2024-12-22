@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CaioDexelop.Models.Utente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Utenti</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary"><img src="~/assets/Create User.svg" alt="Modifica" width="20" style="margin-right: 10px;">Crea nuovo utente</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cognome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+				Azioni
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cognome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                    @* <a asp-action="Edit" asp-route-id="@item.Id"><img src="~/assets/Update.svg" alt="Modifica" width="16" height="16" style="margin-right: 10px;">Modifica</a> | *@
+                    @* <a asp-action="Details" asp-route-id="@item.Id"><img src="~/assets/Details.svg" alt="Dettagli" width="16" height="16" style="margin-right: 10px;">Dettagli</a> | *@
+                    @* <a asp-action="Delete" asp-route-id="@item.Id"><img src="~/assets/Delete.svg" alt="Elimina" width="16" height="16" style="margin-right: 10px;">Elimina</a> *@
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm"><img src="~/assets/Update.svg" alt="Modifica" width="18" style="margin-right: 5px;">Modifica</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm"><img src="~/assets/Details.svg" alt="Dettagli" width="18" style="margin-right: 5px;">Dettagli</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm"><img src="~/assets/Delete.svg" alt="Elimina" width="18" style="margin-right: 5px;">Elimina</a>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<form asp-controller="Utente" asp-action="Index">
+    <p>
+        <label>Ricerca utenti: <input type="text" name="SearchString" /></label>
+        <input type="submit" value="Cerca" />
+    </p>
+</form>
