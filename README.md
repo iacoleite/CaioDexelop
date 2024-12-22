@@ -44,6 +44,8 @@ Alla prima esecuzione, o nel caso in cui il database non esista o sia vuoto, il 
 
 Questo processo automatico semplifica la configurazione iniziale dell'applicazione.
 
+2. Apri il browser e naviga a `https://localhost:7119` o 'http://localhost:5169'.
+
 ## Configurazione del Database (Opzionale)
 
 Questo passaggio è *totalmente opzionale*.
@@ -56,8 +58,6 @@ I comandi SQL per creare il database e inserire dati casuali sono disponibili ne
 2.  Esegui i comandi SQL contenuti nel file `DBinstructions.txt` nell'ordine in cui appaiono.
 
 **Nota:** Assicurati di configurare la stringa di connessione nel file `appsettings.json` per puntare al database che hai creato.
-
-2. Apri il browser e naviga a `https://localhost:7119` o 'http://localhost:5169'.
 
 ## Struttura del Progetto
 
